@@ -1,5 +1,5 @@
 var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
-var bestScore  = 100;
+var bestScore  = 0;
 
 var mainState = {
     preload: function() {
@@ -68,7 +68,7 @@ var mainState = {
     },
     jump: function() {
         if (this.bird.alive == false) return;
-        this.bird.body.velocity.y = -10;
+        this.bird.body.velocity.y = -50;
     },
     restartGame: function() {
         bestScore = this.score;
