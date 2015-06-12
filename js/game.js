@@ -3,7 +3,7 @@ var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
 
 var mainState = {
     preload: function() {
-        game.state.backgroundColor = '#ffc';
+        game.stage.backgroundColor = '#ffc';
 
         game.load.image('bird', 'assets/smile.png');
 
