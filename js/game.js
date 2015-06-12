@@ -1,4 +1,5 @@
 var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
+var bestScore  = 0;
 
 var mainState = {
     preload: function() {
@@ -17,6 +18,8 @@ var mainState = {
 
         game.physics.arcade.enable(this.bird);
 
+        this.bird.body.gravity.y = 600;
+
         var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
         spaceKey.onDown.add(this.jump, this);
@@ -34,14 +37,16 @@ var mainState = {
 
         this.score = 0;
         this.isPassFirstOne = false;
-        this.lableScore = game.add.text(20, 20, "0", {
+        this.lableScore = game.add.text(70, 20, "0", {
             font: "30px Arial",
             fill: "#000"
         });
+        this.bestScore = game.add.text(20, 20, bestScore, {
+            font "32px Arial",
+            fill: "#ff0"
+        })
     },
     update: function() {
-        this.bird.body.gravity.y = 600;
-        
         if (this.bird.inWorld == false)
             this.restartGame();
 
@@ -66,6 +71,7 @@ var mainState = {
         this.bird.body.velocity.y = -350;
     },
     restartGame: function() {
+        score = this.score;
         game.state.start('main');
     },
     addOnePipe: function(x, y, isEmpty) {
