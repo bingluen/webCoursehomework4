@@ -17,8 +17,6 @@ var mainState = {
 
         game.physics.arcade.enable(this.bird);
 
-        this.bird.body.gravity.y = 600;
-
         var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
         spaceKey.onDown.add(this.jump, this);
@@ -42,6 +40,8 @@ var mainState = {
         });
     },
     update: function() {
+        this.bird.body.gravity.y = 600;
+        
         if (this.bird.inWorld == false)
             this.restartGame();
 
@@ -103,10 +103,4 @@ var mainState = {
 
 game.state.add('main', mainState);
 
-$(document).ready(function() {
-    $(window).keydown(function(event) {
-        if (event.keyCode == 32)
-            game.state.start('main');
-    });
-});
-
+game.state.start('main');
