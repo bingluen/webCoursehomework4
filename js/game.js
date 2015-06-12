@@ -12,7 +12,7 @@ var mainState = {
         game.load.image('emptyHole', 'assets/empty.png');
     },
     create: function() {
-        game.physics.startSystem(Phaser.Pyhsics.ARCADE);
+        game.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.bird = this.game.add.sprite(100, 245, 'bird');
 
