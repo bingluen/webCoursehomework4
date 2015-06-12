@@ -41,7 +41,7 @@ var mainState = {
             font: "30px Arial",
             fill: "#000"
         });
-        this.bestScoreLable = game.add.text(20, 20, bestScore, {
+        this.bestScoreLable = game.add.text(20, 20, "BEST: "+ bestScore, {
             font: "32px Arial",
             fill: "#ff0000"
         });
@@ -106,7 +106,7 @@ var mainState = {
             if(this.score > bestScore)
             {
                 bestScore = this.score;
-                this.bestScoreLable.text = bestScore;
+                this.bestScoreLable.text = "BEST: " + bestScore;
             }
         }
     }
