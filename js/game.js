@@ -54,6 +54,7 @@ var mainState = {
         game.physics.arcade.overlap(this.bird, this.emptyHole, this.hitHole, null, this);
     },
     hitHole: function() {
+        console.log('hitHole');
         this.isPassFirstOne = true;
     },
     hitPipe: function() {
