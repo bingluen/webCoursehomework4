@@ -42,7 +42,7 @@ var mainState = {
             fill: "#000"
         });
         this.bestScoreLable = game.add.text(20, 20, bestScore, {
-            font "32px Arial",
+            font: "32px Arial",
             fill: "#ff0"
         });
     },
