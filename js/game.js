@@ -44,7 +44,7 @@ var mainState = {
         this.bestScore = game.add.text(20, 20, bestScore, {
             font "32px Arial",
             fill: "#ff0"
-        })
+        });
     },
     update: function() {
         if (this.bird.inWorld == false)
@@ -71,7 +71,7 @@ var mainState = {
         this.bird.body.velocity.y = -350;
     },
     restartGame: function() {
-        score = this.score;
+        bestScore = this.score;
         game.state.start('main');
     },
     addOnePipe: function(x, y, isEmpty) {
