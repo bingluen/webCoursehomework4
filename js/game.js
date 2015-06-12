@@ -1,5 +1,5 @@
 var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
-
+var 
 
 var mainState = {
     preload: function() {
@@ -104,4 +104,10 @@ var mainState = {
 
 game.state.add('main', mainState);
 
-game.state.start('main');
+$(document).ready(function() {
+    $(window).keydown(function(event) {
+        if (event.keyCode == 32)
+            game.state.start('main');
+    });
+});
+
