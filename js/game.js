@@ -105,7 +105,7 @@ var mainState = {
             this.lableScore.text = this.score;
             if(score > bestScore)
             {
-                bestScore = score;
+                bestScore = this.score;
                 this.bestScoreLable.text = bestScore;
             }
         }
