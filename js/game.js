@@ -37,13 +37,13 @@ var mainState = {
 
         this.score = 0;
         this.isPassFirstOne = false;
-        this.lableScore = game.add.text(70, 20, "0", {
+        this.lableScore = game.add.text(20, 70, "0", {
             font: "30px Arial",
             fill: "#000"
         });
         this.bestScoreLable = game.add.text(20, 20, bestScore, {
             font: "32px Arial",
-            fill: "#ff0"
+            fill: "#ff0000"
         });
     },
     update: function() {
