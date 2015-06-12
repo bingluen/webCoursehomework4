@@ -18,7 +18,7 @@ var mainState = {
 
         game.physics.arcade.enable(this.bird);
 
-        this.bird.body.gravity.y = 600;
+        this.bird.body.gravity.y = 100;
 
         var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
