@@ -9,7 +9,7 @@ var mainState = {
 
         game.load.image('pipe', ' assets/rock.png');
 
-        game.load.image('emptyHole', 'assets/empty.png');
+        game.load.image('emptyHoles', 'assets/empty.png');
     },
     create: function() {
         game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -31,7 +31,7 @@ var mainState = {
 
         this.emptyHoles = game.add.group();
         this.emptyHoles.enableBody = true;
-        this.emptyHoles.createMultiple(8, 'emptyHole');
+        this.emptyHoles.createMultiple(8, 'emptyHoles');
 
         this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
 
@@ -51,7 +51,7 @@ var mainState = {
             this.restartGame();
 
         game.physics.arcade.overlap(this.bird, this.pipes, this.hitPipe, null, this);
-        game.physics.arcade.overlap(this.bird, this.emptyHole, this.hitHole, null, this);
+        game.physics.arcade.overlap(this.bird, this.emptyHoles, this.hitHole, null, this);
     },
     hitHole: function() {
         console.log('hitHole');
