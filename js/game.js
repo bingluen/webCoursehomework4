@@ -68,7 +68,7 @@ var mainState = {
     },
     jump: function() {
         if (this.bird.alive == false) return;
-        this.bird.body.velocity.y = -350;
+        this.bird.body.velocity.y = -10;
     },
     restartGame: function() {
         bestScore = this.score;
