@@ -102,6 +102,11 @@ var mainState = {
         if (this.isPassFirstOne) {
             this.score += 1;
             this.lableScore.text = this.score;
+            if(score > bestScore)
+            {
+                bestScore = score;
+                this.bestScoreLable.text = bestScore;
+            }
         }
     }
 };
