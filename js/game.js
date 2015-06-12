@@ -103,7 +103,7 @@ var mainState = {
         if (this.isPassFirstOne) {
             this.score += 1;
             this.lableScore.text = this.score;
-            if(score > bestScore)
+            if(this.score > bestScore)
             {
                 bestScore = this.score;
                 this.bestScoreLable.text = bestScore;
