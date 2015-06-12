@@ -1,5 +1,5 @@
 var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
-var bestScore  = 0;
+var bestScore  = 100;
 
 var mainState = {
     preload: function() {
