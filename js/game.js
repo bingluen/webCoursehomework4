@@ -5,7 +5,7 @@ var mainState = {
     preload: function() {
         game.stage.backgroundColor = '#ffc';
 
-        game.load.image('bird', 'assets/smile.png');
+        game.load.image('bird', 'assets/char_paratroopa.png');
 
         game.load.image('pipe', ' assets/rock.png');
 
@@ -18,7 +18,7 @@ var mainState = {
 
         game.physics.arcade.enable(this.bird);
 
-        this.bird.body.gravity.y = 100;
+        this.bird.body.gravity.y = 1000;
 
         var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
@@ -69,7 +69,7 @@ var mainState = {
     },
     jump: function() {
         if (this.bird.alive == false) return;
-        this.bird.body.velocity.y = -50;
+        this.bird.body.velocity.y = -450;
     },
     restartGame: function() {
         bestScore = this.score;
